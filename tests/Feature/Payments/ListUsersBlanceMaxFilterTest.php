@@ -13,7 +13,7 @@ class ListUsersBlanceMaxFilterTest extends TestCase
      */
     public function test_balance_max_filter_success(): void
     {
-        $response = $this->getJson(route('users', ['balanceMax'=>300]));
+        $response = $this->getJson(route('v1.users', ['balanceMax'=>300]));
 
         $response->assertStatus(200);
     }

@@ -13,7 +13,7 @@ class ListUsersStausFilterTest extends TestCase
      */
     public function test_status_filter_success(): void
     {
-        $response = $this->getJson(route('users', ['statusCode'=>'authorized']));
+        $response = $this->getJson(route('v1.users', ['statusCode'=>'authorized']));
 
         $response->assertStatus(200);
     }

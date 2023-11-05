@@ -13,7 +13,7 @@ class ListUsersBlanceMinFilterTest extends TestCase
      */
     public function test_balance_min_filter_success(): void
     {
-        $response = $this->getJson(route('users', ['balanceMin'=>100]));
+        $response = $this->getJson(route('v1.users', ['balanceMin'=>100]));
 
         $response->assertStatus(200);
     }

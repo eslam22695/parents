@@ -13,7 +13,7 @@ class ListUsersProviderFilterTest extends TestCase
      */
     public function test_provider_filter_success(): void
     {
-        $response = $this->getJson(route('users', ['provider'=>'DataProviderX']));
+        $response = $this->getJson(route('v1.users', ['provider'=>'DataProviderX']));
 
         $response->assertStatus(200);
     }
@@ -23,7 +23,7 @@ class ListUsersProviderFilterTest extends TestCase
      */
     public function test_provider_filter_error(): void
     {
-        $response = $this->getJson(route('users', ['provider'=>'DataProviderZ']));
+        $response = $this->getJson(route('v1.users', ['provider'=>'DataProviderZ']));
 
         $response->assertStatus(401);
     }

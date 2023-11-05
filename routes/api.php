@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::group(['namespace' => 'App\\Http\\Controllers'], function () {
+Route::group(['namespace' => 'App\\Http\\Controllers','prefix' => 'v1','as' => 'v1.'], function () {
 
     Route::get('/users','UserController@index')->name('users');
 

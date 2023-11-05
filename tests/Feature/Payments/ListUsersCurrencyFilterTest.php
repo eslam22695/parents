@@ -13,7 +13,7 @@ class ListUsersCurrencyFilterTest extends TestCase
      */
     public function test_currency_filter_success(): void
     {
-        $response = $this->getJson(route('users', ['currency'=>'USD']));
+        $response = $this->getJson(route('v1.users', ['currency'=>'USD']));
 
         $response->assertStatus(200);
     }
